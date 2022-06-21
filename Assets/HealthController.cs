@@ -8,7 +8,7 @@ public class HealthController : MonoBehaviour
     public GameObject healthBar;
     public float maxHealth;
     public float currentHealth;
-    HealthBarFill healthBarFill;
+    private HealthBarFill healthBarFill;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class HealthController : MonoBehaviour
 
     void Update()
     {
-        healthBarFill.FillUpdater();
+        healthBarFill.FillUpdater(currentHealth, maxHealth);
     }
 
     public void Heal(int amount) {

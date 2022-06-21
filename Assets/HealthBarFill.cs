@@ -7,12 +7,11 @@ public class HealthBarFill : MonoBehaviour
 {
     void Start()
     {
-        FillUpdater();
     }
-    private Image healthBarFill;
+    public Image healthBarFill;
 
-    public void FillUpdater() {
-        healthBarFill.fillAmount = 0.5f;
+    public void FillUpdater(float currentHealth, float maxHealth) {
+        healthBarFill.fillAmount = currentHealth / maxHealth;
         Debug.Log(healthBarFill.fillAmount);
     }
 }
