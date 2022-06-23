@@ -7,6 +7,7 @@ public class HealthBarFill : MonoBehaviour
 {
     void Start()
     {
+        
     }
     public Image healthBarFill;
 

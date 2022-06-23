@@ -8,11 +8,11 @@ public class HealthController : MonoBehaviour
     public GameObject healthBar;
     public float maxHealth;
     public float currentHealth;
-    private HealthBarFill healthBarFill;
+    public HealthBarFill healthBarFill;
     // Start is called before the first frame update
     void Start()
     {
-        healthBarFill = GetComponent<HealthBarFill>();
+        healthBarFill = GetComponentInChildren<HealthBarFill>();
         currentHealth = maxHealth;
     }
 
